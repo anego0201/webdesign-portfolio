@@ -1,0 +1,133 @@
+<!--
+Wireframe (ASCII sketch)
+
+[Header]-------------------------------
+| Logo | Home About Projects Creative Contact |
+----------------------------------------
+
+[Hero]
+-------------------------------------------------
+| Left: Big greeting headline + CTA buttons       |
+| Right: Illustration / Avatar                    |
+-------------------------------------------------
+
+[About]
+---------------------------------
+| Photo | Short bio                     |
+|      | Skills (bars / chips)          |
+---------------------------------
+
+[Projects]
+---------------------------------
+| Card 1 | Card 2 | Card 3              |
+| Card 4 | Card 5 | Card 6              |
+---------------------------------
+
+[Creative Space]
+---------------------------------
+| Full width area for interactive / artwork     |
+---------------------------------
+
+[Contact/Footer]
+---------------------------------
+| Small form | Social icons | Copyright       |
+---------------------------------
+
+Notes:
+- One-page flow with sections and smooth scroll.
+- Color theme: dark gradient with neon accents.
+- Typography: Inter / Poppins.
+- Lightweight animations (hover glow, subtle parallax effect).
+-->
+
+<!doctype html>
+<html lang="jp">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>自己紹介 — リ　ホアン　アイン　ヴィ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="nav">
+        <div class="menu">
+          <a href="#home">ホームページ</a>
+          <a href="#about">アバオート</a>
+          <a href="#contact">連絡</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div>
+          <h1>こにちは！ リ　ホアン　アイン　ヴィ　と申します。 </h1>
+          <p>一年生、読売医療福祉専門学校でプログラミングを学んでおり、自己を磨く過程にあり、将来には現代的な製品を作り出し、客に満足を提供しようと努めています。</p>
+          <div class="cta">
+            <a class="btn btn--primary" href="#contact">コンタクト</a>
+          </div>
+        </div>
+        <div>
+          <img src="anhmatvymd.jpg" alt="VyMD" width="420px" height="320px" class="avatar">
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div><img src="anhmatvymd.png" alt="" class="photo"></div>
+        <div>
+          <h2>私について</h2>
+          <p>ベトナム国から参りました、.</p>
+          <div class="skills">
+            <div class="skill">
+              <div style="width:80px;">IT</div>
+              <div class="bar"><i style="width:39%"></i></div>
+            </div>
+            <div class="skill">
+              <div style="width:80px;">英語</div>
+              <div class="bar"><i style="width:88%"></i></div>
+            </div>
+            <div class="skill">
+              <div style="width:80px;">日本語</div>
+              <div class="bar"><i style="width: 60%"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="form">
+          <h2>コンタクト</h2>
+          <input type="text" placeholder="名前" />
+          <input type="email" placeholder="メールアドレス" style="margin-top:12px" />
+          <textarea rows="5" placeholder="メッセージ" style="margin-top:12px"></textarea>
+          <div style="margin-top:12px"><button class="btn btn--primary">発送</button></div>
+        </div>
+        <aside class="social">
+          <h3>連絡先</h3>
+          <a href="https://www.line.me/en/" target="_blank"><img src="LINE_logo.svg.png" width="50px" height="50px"
+              id="line"></a>
+          <a href="https://www.facebook.com/lyhoanganhvy010120/" target="_blank"><img src="Facebook_logo_(square).png"
+              width="50px" height="50px" id="facebook"></a>
+          <a href="https://www.instagram.com/vymongdu/" target="_blank"><img src="Instagram_icon.png" width="50px"
+              height="50px" id="instagram"></a>
+        </aside>
+      </section>
+    </main>
+
+    <footer style="text-align:center;margin-top:28px">Made by VyMD • © <span id="year"></span></footer>
+  </div>
+
+  <div class="accent-wave"></div>
+</body>
+
+</html>

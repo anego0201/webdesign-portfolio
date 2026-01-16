@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!-- HEAD -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
+</head>
+
+<!-- BODY -->
+<body id="body-container">
+
+  <!-- HEADER -->
+   <!-- 
+    Header này sẽ tái sử dụng cho các trang khác, 
+    bởi sẽ phải sử dụng để di chuyển giữa các trang
+   -->
+    <div id="header-container">
+  <header>
+    <div id="left-header">
+      <a href="./home.html">リ　ヴィ</a>
+    </div>
+    <nav id="right-header">
+      <a href="./home.html">Home</a>
+      <a href="./about-me.html">About Me</a>
+      <a href="./work.html">Work</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+    </div>
+  <!--  -->
+
+  <!-- MAIN -->
+    <!-- 
+    Main sẽ là nơi khác nhau giữa các bộ phận
+    -->
+    <main>
+    
+    </main>
+  <!--  -->
+
+  <!-- FOOTER -->
+    <!-- 
+    Footer này sẽ tái sử dụng cho các trang khác
+    để hiển thị coppy right và một số thứ khác bên dưới website
+    -->
+   <footer>
+
+   </footer>
+  <!--  -->
+
+  <!--  Khúc này là phần lựa chọn đa ngôn ngữ -->
+    <div> 
+    <h1 id="title"></h1>
+    <p id="description"></p>
+    <select onchange="changeLang(this.value)">
+      <option value="vi">🇻🇳 Tiếng Việt</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="ja">🇯🇵 日本語</option>
+    </select>
+
+    </div>
+  <!--//-->
+
+  <div class="container">
+    <input type="email" placeholder="Email">
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="/javascript/home.js"></script>
+  <!--  -->
+
+</body>
+</html>
