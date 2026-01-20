@@ -1,77 +1,71 @@
-header{
-  justify-content: center;
-  display: flex;
+:root {
+  --bg-1: #0f0c2f;
+  /* deep indigo */
+  --bg-2: #071527;
+  /* dark cyan */
+  --accent-1: #8b5cf6;
+  /* purple */
+  --accent-2: #06b6d4;
+  /* teal */
+  --accent-3: #ff6bcb;
+  /* pink */
+  --glass: rgba(255, 255, 255, 0.06);
+  --card: rgba(255, 255, 255, 0.03);
+  --text: #e6eef8;
+  --muted: #9fb3c8;
+  --radius: 14px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+  box-sizing: border-box
 }
 
 #header-container{
-  padding: 0;
-  margin: 10px;
-  width: 80%;
-  height: auto;
-  background-color: aqua;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#left-header{
-  justify-content: left;
+  max-width: 1200px;
+  padding: 30px;
+  margin: 0 auto;
 }
 
-#right-header{
-  justify-content: right;
-}
-
-
-body #body-container {
-  padding-left: 500px;
-  padding-right: 50px;
-  font-family: Arial, sans-serif;
+html,
+body {
+  height: 100%;
   margin: 0;
-  background: #f9f9f9;
-  color: #333;
+  background: linear-gradient(120deg, var(--bg-1), var(--bg-2));
+  color: var(--text);
+  -webkit-font-smoothing: antialiased
 }
 
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+header {
+  display: flex;
+  width: 100%; 
+  backdrop-filter: blur(50px);
+  position: sticky;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  align-items: center;
+  justify-content: space-between;
 }
 
-.hero {
-  text-align: center;
-  background: #111;
-  color: white;
-}
-
-.hero img {
-  width: 120px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
-}
-
-.skills ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills li {
-  margin: 8px 0;
-}
-
-.project {
-  background: white;
+#header-container{
   padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
 }
 
-.project span {
-  font-size: 0.9em;
-  color: #666;
+#header-container a{
+  text-decoration: none;
+  padding: 0;
+  margin: 5px;
+  height: auto; 
 }
+
+#left-header, #right-header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+
+

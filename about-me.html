@@ -1,72 +1,57 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
+
+<!-- HEAD -->
 <head>
   <meta charset="UTF-8">
-  <title>Vy | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
 </head>
-<body>
-    <header id="header-container">
-    <div id="left-header">
-      <a href="./home.html">リ　ヴィ</a>
-    </div>
-    <div id="right-header">
-      <a href="./about-me.html">About Me</a>
-      <a href="./work.html">Work</a>
-      <a href="./contact.html">Contact</a>
-    </div>
-  </header>
-  <!-- HERO -->
-  <section class="hero">
-    <img src="assets/avatar.jpg" alt="Avatar">
-    <h1>Vy</h1>
-    <p>Junior Developer | Java & Web Learner</p>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      Tôi là một người đang học lập trình và xây dựng các project thực tế
-      bằng Java và Web cơ bản. Tôi tập trung vào nền tảng và tư duy logic
-      hơn là chạy theo công nghệ.
-    </p>
-  </section>
+<!-- BODY -->
+<body id="body-container">
 
-  <!-- SKILLS -->
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML / CSS</li>
-      <li>JavaScript (Basic)</li>
-      <li>Java (OOP, Swing)</li>
-      <li>Git / GitHub</li>
-    </ul>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Calculator (Java Swing)</h3>
-      <p>Ứng dụng máy tính cơ bản sử dụng Java Swing.</p>
-      <span>Java</span>
+  <!-- HEADER -->
+   <!-- 
+    Header này sẽ tái sử dụng cho các trang khác, 
+    bởi sẽ phải sử dụng để di chuyển giữa các trang
+   -->
+    <div id="header-container">
+      <header>
+        <div id="left-header">
+          <a href="./home.html">リ　ヴィ</a>
+        </div>
+        <div id="right-header">
+          <nav id="nav-container">
+            <a href="./home.html">Home</a>
+            <a href="./about-me.html">About Me</a>
+            <a href="./work.html">Work</a>
+            <a href="./contact.html">Contact</a>
+          </nav>
+        </div> 
+      </header>
     </div>
 
-    <div class="project">
-      <h3>Work Time & Salary App</h3>
-      <p>Ứng dụng nhập giờ làm và tính lương theo ngày.</p>
-      <span>Java</span>
-    </div>
-  </section>
+  <!-- MAIN -->
+    <!-- 
+    Main sẽ là nơi khác nhau giữa các bộ phận
+    -->
+    <main>
+      
+    </main>
 
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-    <p>GitHub: github.com/yourname</p>
-  </section>
-<script src="./about-me.js"></script>
+  <!-- FOOTER -->
+    <!-- 
+    Footer này sẽ tái sử dụng cho các trang khác
+    để hiển thị coppy right và một số thứ khác bên dưới website
+    -->
+   <footer>
+
+   </footer>
+
+  <!-- SCRIPT -->
+  <script src="/javascript/home.js"></script>
+
 </body>
-</html>>
+</html>
