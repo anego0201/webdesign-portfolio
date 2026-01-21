@@ -11,41 +11,95 @@
 </head>
 
 <!-- BODY -->
-<body id="body-container">
-  <!-- HEADER -->
-  <div id="header-container">
-      <header>
-        <div id="left-header">
-          <a href="./home.html">リ　ヴィ</a>
-        </div>
-        <div id="right-header">
-          <nav id="nav-container">
-            <a href="./home.html">Home</a>
-            <a href="./about-me.html">About Me</a><aside></aside>
-          </nav>
-        </div> 
-      </header> 
-   </div>
-   <section class="main-container">
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <!-- 
+      Merge checkbox with icon to open slide nav bar
+    -->
+    <!-- <input type="checkbox" id="nav-open"  class="hidden-nav-checkbox">
+    <label for="nav-open" class="nav-open"><img src="./images/app icon/NavbarFacebook.png" width="30px" height="30px"></label> -->
+    
+    <!-- SLIDE NAVIGATOR -->
+    <!-- <div id="slide-nav">
+      <ul>
+        <li> -->
+          <!-- home tag -->
+          <!-- <a href="./home.html">HOME</a>
+        </li>
+        <li> -->
+          <!-- about-me tag -->
+          <!-- <a href="./about-me.html">ABOUT ME</a>
+        </li>
+        <li> -->
+          <!-- Work tag -->
+          <!-- <a href="./work.html">WORK</a>
+        </li>
+        <li> -->
+          <!-- Contact tag -->
+          <!-- <a href="./contact.html">CONTACT</a>
+        </li>
+      </ul> 
+    </div>
+  </nav> -->
+    <!-- HEADER -->
 
-      <!-- LEFT -->
-      <div class="left">
-        <img src="/images/Avatar-VyMongDu.jpg" alt="Profile Photo">
+    <!-- <header>
+      <nav class="nav">
+        <div class="menu">
+          <a href="#home">ホーム</a>
+          <a href="#about">アバオート</a>
+          <a href="#contact">連絡</a>
+        </div>
+      </nav>
+    </header> -->
+
+    <!-- Toggle Button -->
+  <div class="nav-toggle" id="navToggle">
+    <img src="./images/app icon/NavbarFacebook.png" width="50px" height="40px">
+  </div>
+
+  <!-- Hidden Navbar -->
+  <nav class="side-nav" id="sideNav">
+    <ul>
+      <!-- Nav list -->
+      <li><a href="./home.html" target="#">ホームページ</a></li>
+      <li><a href="./about-me.html" target="#">アバオート</a></li>
+      <li><a href="./work.html" target="#">プロジェクト</a></li>
+      <li><a href="./contact.html" target="#">連絡先</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="container">
+    <!-- LEFT -->
+     <!-- AVATAR SECTION -->
+    <div class="left-main">
+      <!-- avatar adtribute -->
+      <img src="/images/Avatar-VyMongDu.jpg" alt="Profile Photo" title="リ　ホアン　アイン　ヴィ">
+    </div>
+
+    <!-- RIGHT -->
+     <!-- INFO DISPLAY SECTION -->
+    <div class="right-main">
+
+      <!-- Intro name -->
+      <h4 class="intro">こんにちは！！</h4>
+      <h1 class="name">リ　ホアン　アイン　ヴィーと申します。</h1>
+      <div class="section">
+        <!-- Few words about myself -->
+        <h3>私について</h3>
+        <p>
+          一年生、読売医療福祉専門学校でプログラミングを学んでおり、自己を磨く過程にあり、
+          将来には現代的な製品を作り出し、客に満足を提供しようと努めています。
+        </p>
       </div>
 
-      <!-- RIGHT -->
-      <div class="right">
-        <h4 class="intro">こんにちは！！</h4>
-        <h1 class="name">リ　ホアン　アイン　ヴィーと申します。</h1>
-          <div class="section">
-            <h3>私について</h3>
-              <p>
-                一年生、読売医療福祉専門学校でプログラミングを学んでおり、自己を磨く過程にあり、
-                将来には現代的な製品を作り出し、客に満足を提供しようと努めています。
-              </p>
-          </div>
-
       <div class="grid">
+        <!-- 
+          GRID LEFT-PART
+          Education info
+        -->
         <div>
           <h3>教育</h3>
           <p>2018 – 2022</p>
@@ -55,33 +109,49 @@
           <p>2025 – 現在</p>
           <span>読売理工医療福祉専門学校</span>
         </div>
+
+        <!-- 
+          GRID RIGHT-PART
+          Programing language
+        -->
+        <div>
+          <h3>プログラミング言語</h3>
+          <p>- Javascript</p>
+          <P>- Java</P>
+          <p>- Python</p>
+          <p>- HTML/CSS</p>
+        </div>
       </div>
 
+      <!-- OTHER SKILLS SECTION -->
       <div class="section">
         <h3>スキル</h3>
         <div class="skills">
-          <img src="./images/app icon/PhotoshopFacebook.png" alt="Photoshop" width="75px" height="75px">
-          <img src="./images/app icon/AfterEffectFacebook.png" alt="AfterEffect" width="75px" height="75px">
-          <img src="./images/app icon/IllutrastorFacebook.png" alt="Illutrastor" width="75px" height="75px">
-          <img src="./images/app icon/PremereProFacebook.png" alt="PremerePro" width="75px" height="75px">
+          <img src="./images/app icon/PhotoshopFacebook.png" alt="Photoshop" width="75px" height="75px" title="Photoshop">
+          <img src="./images/app icon/AfterEffectFacebook.png" alt="AfterEffect" width="75px" height="75px" title="After Effect">
+          <img src="./images/app icon/IllutrastorFacebook.png" alt="Illutrastor" width="75px" height="75px" title="Illutrastor">
+          <img src="./images/app icon/PremereProFacebook.png" alt="PremerePro" width="75px" height="75px" title="Premere Pro">
         </div>
       </div>
+
+      <!-- SOCIAL SECTION -->
       <div class="section">
         <h3>ソシアル</h3>
         <div class="socials">
            <a href="https://www.line.me/en/" target="_blank"><img src="/images/app icon/LineFacebook.png" width="100px" height="100px"
-              id="line"></a>
+              id="line" title="Line"></a>
           <a href="https://www.facebook.com/lyhoanganhvy010120/" target="_blank"><img src="/images/app icon/FacebookFacebook.png"
-              width="100px" height="100px" id="facebook"></a>
+              width="100px" height="100px" id="facebook" title="Facebook"></a>
           <a href="https://www.instagram.com/vymongdu/" target="_blank"><img src="/images/app icon/InstagramFacebook.png" width="100px"
-              height="100px" id="instagram"></a>
+              height="100px" id="instagram" title="Instagram"></a>
           <a href="https://github.com/anego0201" target="_blank"><img src="/images/app icon/GithubFacebook.png" width="100px"
-              height="100px" id="instagram"></a>              
+              height="100px" id="github" title="GitHub"></a>              
         </div>
       </div>
     </div>
-
   </section>
+
+  <!-- JAVASCRIPT -->
   <script src="javascript/home.js"></script>
 </body>
 </html>

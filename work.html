@@ -1,57 +1,57 @@
 <!DOCTYPE html>
-<html lang="ja">
-
-<!-- HEAD -->
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Document</title>
+<meta charset="UTF-8">
+<title>Projects</title>
+<link rel="stylesheet" href="./css/work.css">
 </head>
-
-<!-- BODY -->
-<body id="body-container">
-
-  <!-- HEADER -->
-   <!-- 
-    Header này sẽ tái sử dụng cho các trang khác, 
-    bởi sẽ phải sử dụng để di chuyển giữa các trang
-   -->
-    <div id="header-container">
-      <header>
-        <div id="left-header">
-          <a href="./home.html">リ　ヴィ</a>
-        </div>
-        <div id="right-header"></div>
-          <nav id="nav-container">
-            <a href="./home.html">Home</a>
-            <a href="./about-me.html">About Me</a>
-            <a href="./work.html">Work</a>
-            <a href="./contact.html">Contact</a>
-          </nav>
-        </div> 
-      </header>
-    </div>
-
-  <!-- MAIN -->
-    <!-- 
-    Main sẽ là nơi khác nhau giữa các bộ phận
-    -->
-    <main>
-      
-    </main>
-
-  <!-- FOOTER -->
-    <!-- 
-    Footer này sẽ tái sử dụng cho các trang khác
-    để hiển thị coppy right và một số thứ khác bên dưới website
-    -->
-   <footer>
-
-   </footer>
-
-  <!-- SCRIPT -->
-  <script src="/javascript/home.js"></script>
-
+<body>
+<!-- NAVBAR -->
+  <!-- Hidden Navbar -->
+  <nav class="side-nav" id="sideNav">
+    <ul>
+      <!-- Nav list -->
+      <li><a href="./home.html" target="#">ホームページ</a></li>
+      <li><a href="./about-me.html" target="#">アバオート</a></li>
+      <li><a href="./work.html" target="#">プロジェクト</a></li>
+      <li><a href="./contact.html" target="#">連絡先</a></li>
+    </ul>
+  </nav>
+<!-- PROJECT SECTION -->
+<section class="projects">
+<div class="project-card">
+<!-- LEFT INFO (2/5) -->
+<div class="project-info">
+<h2>Portfolio Website</h2>
+<p class="desc">
+       Personal portfolio with dark luxury theme,
+       cinematic lighting and interactive UI.
+</p>
+<ul class="tech">
+<li>HTML / CSS</li>
+<li>JavaScript</li>
+<li>GSAP</li>
+</ul>
+<div class="actions">
+<a href="#" class="btn">View Project</a>
+<a href="#" class="btn ghost">Source Code</a>
+</div>
+</div>
+<!-- RIGHT MEDIA (3/5) -->
+<div class="project-media">
+<img src="preview.jpg" alt="project preview">
+<!-- optional video -->
+<video muted loop>
+<source src="preview.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+<!-- CONTROLS -->
+<div class="controls">
+<button id="prev">⟵</button>
+<button id="next">⟶</button>
+</div>
+</section>
+<script src="./javascript/work.js"></script>
 </body>
 </html>
