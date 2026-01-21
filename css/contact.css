@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Toggle Icon */
+.nav-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.4s ease;
+}
+
+/* Side Navbar */
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #1e1e2f;
+  transition: transform 0.4s ease;
+  z-index: 1000;
+  padding-top: 80px;
+}
+
+/* Nav Content */
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 20px 0;
+  text-align: center;
+
+}
+
+.side-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.side-nav li:hover {
+    color: #00c2ff;
+}
+
+/* Active State */
+.side-nav.active {
+  transform: translateX(-260px);
+}
+
+.nav-toggle.active {
+  transform: translateX(-170px);
+}
+
+.side-nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+/* gạch chân ẩn ban đầu */
+.side-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #00c2ff;
+  transition: width 0.3s ease;
+}
+
+/* hover vào gạch chân chạy ra */
+.side-nav a:hover::after {
+  width: 100%;
+}

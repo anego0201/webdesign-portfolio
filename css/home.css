@@ -1,3 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at left, #3b3bff3f, #0b0b0f 60%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* H3 tag */
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #9aa0ff;
+}
+
 /* Toggle Icon */
 .nav-toggle {
   position: fixed;
@@ -76,29 +99,6 @@
 /* hover vào gạch chân chạy ra */
 .side-nav a:hover::after {
   width: 100%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-body {
-    background: radial-gradient(circle at left, #3b3bff3f, #0b0b0f 60%);
-    color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* H3 tag */
-h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #9aa0ff;
 }
 
 .container {

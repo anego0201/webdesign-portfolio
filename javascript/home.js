@@ -8,10 +8,7 @@ function changeLang(lang) {
       document.getElementById("description").textContent = data.description;
     });
 }
-
-// mặc định
-changeLang("ja");
-
+function navslide(){
   const toggle = document.getElementById("navToggle");
   const nav = document.getElementById("sideNav");
 
@@ -19,3 +16,9 @@ changeLang("ja");
     toggle.classList.toggle("active");
     nav.classList.toggle("active");
   });
+}
+
+// mặc định
+changeLang("ja");
+navslide();
+

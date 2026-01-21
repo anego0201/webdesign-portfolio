@@ -26,6 +26,18 @@ function flip(dir) {
    card.style.transform = "rotateY(0deg)";
  }, 300);
 }
+
+
+function navslide(){
+  const toggle = document.getElementById("navToggle");
+  const nav = document.getElementById("sideNav");
+
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+}
+navslide();
 function updateProject() {
  const p = projects[index];
  document.querySelector(".project-info h2").innerText = p.title;

@@ -5,8 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/about-me.css">
+  <title>About me</title>
 </head>
 
 <!-- BODY -->
@@ -17,22 +17,20 @@
     Header này sẽ tái sử dụng cho các trang khác, 
     bởi sẽ phải sử dụng để di chuyển giữa các trang
    -->
-    <div id="header-container">
-      <header>
-        <div id="left-header">
-          <a href="./home.html">リ　ヴィ</a>
-        </div>
-        <div id="right-header">
-          <nav id="nav-container">
-            <a href="./home.html">Home</a>
-            <a href="./about-me.html">About Me</a>
-            <a href="./work.html">Work</a>
-            <a href="./contact.html">Contact</a>
-          </nav>
-        </div> 
-      </header>
-    </div>
+  <div class="nav-toggle" id="navToggle">
+    <img src="./images/app icon/NavbarFacebook.png" width="50px" height="40px">
+  </div>
 
+  <!-- Hidden Navbar -->
+  <nav class="side-nav" id="sideNav">
+    <ul>
+      <!-- Nav list -->
+      <li><a href="./home.html" target="#">ホームページ</a></li>
+      <li><a href="./about-me.html" target="#">アバオート</a></li>
+      <li><a href="./work.html" target="#">作品集</a></li>
+      <li><a href="./contact.html" target="#">連絡先</a></li>
+    </ul>
+  </nav>
   <!-- MAIN -->
     <!-- 
     Main sẽ là nơi khác nhau giữa các bộ phận

@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
 /* Toggle Icon */
 .nav-toggle {
   position: fixed;
@@ -42,6 +49,40 @@
 
 .side-nav li:hover {
     color: #00c2ff;
+}
+
+/* Active State */
+.side-nav.active {
+  transform: translateX(-260px);
+}
+
+.nav-toggle.active {
+  transform: translateX(-170px);
+}
+
+.side-nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+/* gạch chân ẩn ban đầu */
+.side-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #00c2ff;
+  transition: width 0.3s ease;
+}
+
+/* hover vào gạch chân chạy ra */
+.side-nav a:hover::after {
+  width: 100%;
 }
 
 * {
