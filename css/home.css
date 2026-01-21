@@ -14,12 +14,7 @@ body {
     justify-content: center;
 }
 
-#body-container{
-    display: flex;
-    flex-direction: column; /* Stacks items vertically */
-}
-
-.main-container {
+.container {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     gap: 50px;
