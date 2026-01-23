@@ -1,3 +1,4 @@
+/* GIÁ TRỊ GỐC CHO CÁC TRANG */
 * {
     margin: 0;
     padding: 0;
@@ -100,6 +101,7 @@ h3 {
 .side-nav a:hover::after {
   width: 100%;
 }
+/* CUỐI CỦA GIÁ TRỊ GỐC CỦA CÁC TRANG /\ */
 
 .container {
     display: grid;
@@ -183,11 +185,9 @@ h3 {
 .socials a {
     text-decoration: none;
     color: #ffffff;
-    opacity: 0.8;
     transition: 0.3s;
 }
 
 .socials a:hover {
     transform: scale(1.1);
-    opacity: 1;
 }

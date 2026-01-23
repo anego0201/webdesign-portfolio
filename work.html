@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Works</title>
-<link rel="stylesheet" href="./css/work.css">
+  <meta charset="UTF-8">
+  <title>Works</title>
+  <link rel="stylesheet" href="./css/work.css">
 </head>
 <body>
+
+  <!-- NAV-BAR BLOCK -->
   <div class="nav-toggle" id="navToggle">
     <img src="./images/app icon/NavbarFacebook.png" width="50px" height="40px">
   </div>
@@ -14,47 +16,55 @@
   <nav class="side-nav" id="sideNav">
     <ul>
       <!-- Nav list -->
-      <li><a href="./home.html" target="#">ホームページ</a></li>
-      <li><a href="./about-me.html" target="#">アバオート</a></li>
-      <li><a href="./work.html" target="#">作品集</a></li>
-      <li><a href="./contact.html" target="#">連絡先</a></li>
+      <li><a href="./home.html">ホームページ</a></li>
+      <li><a href="./about-me.html">アバオート</a></li>
+      <li><a href="./work.html">作品集</a></li>
+      <li><a href="./contact.html">連絡先</a></li>
     </ul>
   </nav>
-<!-- PROJECT SECTION -->
-<section class="projects">
-<div class="project-card">
-<!-- LEFT INFO (2/5) -->
-<div class="project-info">
-<h2>Portfolio Website</h2>
-<p class="desc">
-       Personal portfolio with dark luxury theme,
-       cinematic lighting and interactive UI.
-</p>
-<ul class="tech">
-<li>HTML / CSS</li>
-<li>JavaScript</li>
-<li>GSAP</li>
-</ul>
-<div class="actions">
-<a href="#" class="btn">View Project</a>
-<a href="#" class="btn ghost">Source Code</a>
-</div>
-</div>
-<!-- RIGHT MEDIA (3/5) -->
-<div class="project-media">
-<img src="preview.jpg" alt="project preview">
-<!-- optional video -->
-<video muted loop>
-<source src="preview.mp4" type="video/mp4">
-</video>
-</div>
-</div>
-<!-- CONTROLS -->
-<div class="controls">
-<button id="prev">⟵</button>
-<button id="next">⟶</button>
-</div>
-</section>
-<script src="./javascript/work.js"></script>
-</body>
+
+  <!-- PROJECT SECTION -->
+  <section class="projects">
+    <div class="project-card">
+
+      <!-- LEFT INFO (2/5) -->
+      <div class="project-info">
+        <h2>WORK SHOWCASE</h2>
+        <!-- Description part -->
+        <p class="desc">
+          Personal portfolio with dark luxury theme,
+          cinematic lighting and interactive UI.
+        </p>
+        <ul class="tech">
+          <li>HTML / CSS</li>
+          <li>JavaScript</li>
+          <li>GSAP</li>
+        </ul>
+          <div class="actions">
+            <a href="#" class="btn">プロジェクトをビュー</a>
+            <a href="#" class="btn ghost">ソースコード </a>
+          </div>
+      </div>
+    
+      <!-- RIGHT MEDIA (3/5) -->
+      <div class="project-media">
+        <img src="preview.jpg" alt="project preview">
+
+        <!-- optional video -->
+        <video muted loop>
+          <source src="preview.mp4" type="video/mp4">
+        </video>
+      </div>
+  </div>
+
+      <!-- CONTROLS -->
+      <div class="controls">
+        <button id="prev">Next</button>
+        <button id="next">Previous</button>
+      </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="./javascript/work.js"></script>
+  </body>
 </html>

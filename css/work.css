@@ -5,6 +5,23 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+ min-height: 100vh;
+ background: radial-gradient(
+   circle at top right,
+   #3a3f52 0%,
+   #1f2433 35%,
+   #0b0e14 70%
+ );
+ color: #fff;
+}
+
+/* H3 tag */
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #9aa0ff;
+}
 /* Toggle Icon */
 .nav-toggle {
   position: fixed;
@@ -85,46 +102,8 @@
   width: 100%;
 }
 
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- font-family: Inter, sans-serif;
-}
-body {
- min-height: 100vh;
- background: radial-gradient(
-   circle at top right,
-   #3a3f52 0%,
-   #1f2433 35%,
-   #0b0e14 70%
- );
- color: #fff;
-}
-/* NAVBAR */
-.navbar {
- height: 70px;
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 0 60px;
- background: rgba(10,10,20,0.6);
- backdrop-filter: blur(10px);
-}
-.navbar a {
- color: #ccc;
- margin-left: 25px;
- text-decoration: none;
- transition: 0.3s;
-}
-.navbar a:hover,
-.navbar a.active {
- color: #9aa0ff;
-}
-.logo {
- font-weight: 700;
- letter-spacing: 2px;
-}
+
+
 /* PROJECT SECTION */
 .projects {
  padding: 60px;
