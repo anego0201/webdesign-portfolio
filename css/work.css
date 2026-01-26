@@ -104,95 +104,132 @@ h3 {
 
 
 
-/* PROJECT SECTION */
-.projects {
- padding: 60px;
- display: flex;
- flex-direction: column;
- align-items: center;
+/* ===========================
+   PROJECT SHOWCASE LAYOUT
+=========================== */
+
+.project-showcase{
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
-/* CARD */
-.project-card {
- width: 100%;
- max-width: 1100px;
- display: grid;
- grid-template-columns: 2fr 3fr;
- background: rgba(15,15,30,0.75);
- border-radius: 20px;
- overflow: hidden;
- box-shadow: 0 40px 80px rgba(0,0,0,0.6);
- transition: transform 0.6s ease;
+
+/* CARD 70% */
+.showcase-card{
+  width:70%;
+  max-width:1200px;
+  display:grid;
+  grid-template-columns: 2fr 3fr;
+  background: rgba(15,15,30,0.75);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 40px 80px rgba(0,0,0,0.6);
 }
-/* INFO */
-.project-info {
- padding: 50px;
+
+/* LEFT */
+.showcase-info{
+  padding:50px;
 }
-.project-info h2 {
- font-size: 32px;
- margin-bottom: 15px;
+
+.showcase-info h2{
+  font-size:32px;
+  margin-bottom:10px;
 }
-.desc {
- color: #d0d0d0;
- line-height: 1.6;
- margin-bottom: 20px;
+
+.showcase-info h4{
+  font-size:16px;
+  color:#9aa0ff;
+  margin-bottom:20px;
 }
-.tech li {
- list-style: none;
- font-size: 14px;
- opacity: 0.8;
+
+.tech li{
+  list-style:none;
+  font-size:14px;
+  opacity:0.8;
+  margin-bottom:6px;
 }
-.actions {
- margin-top: 30px;
+
+.actions{
+  margin-top:30px;
 }
-.btn {
- padding: 10px 22px;
- background: #9aa0ff;
- color: #000;
- border-radius: 25px;
- text-decoration: none;
- margin-right: 10px;
+
+.actions a {
+  text-decoration: none;
+  background:none;
+  border:1px solid #9aa0ff;
+  border-radius: 15px;
+  color:#9aa0ff;
+  font-size:18px;
+  padding: 10px;
+  transform: scale(1);
+  transition: 0.3s;
 }
-.btn.ghost {
- background: transparent;
- border: 1px solid #9aa0ff;
- color: #9aa0ff;
+
+/* RIGHT */
+.showcase-media{
+  position:relative;
+  border-left:1px solid rgba(255,255,255,0.05);
+  overflow:hidden;
 }
-/* MEDIA */
-.project-media {
- position: relative;
- overflow: hidden;
- cursor: pointer;
+
+.showcase-media img,
+.showcase-media video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.6s;
 }
-.project-media img,
-.project-media video {
- width: 100%;
- height: 100%;
- object-fit: cover;
- transition: 0.6s;
+
+.showcase-media video{
+  position:absolute;
+  inset:0;
+  opacity:0;
 }
-.project-media video {
- position: absolute;
- inset: 0;
- opacity: 0;
+
+/* hover preview */
+.showcase-media:hover img{
+  transform:scale(1.1);
+  filter:brightness(0.6);
 }
-/* Hover reveal */
-.project-media:hover img {
- transform: scale(1.1);
- filter: brightness(0.6);
+.showcase-media:hover video{
+  opacity:1;
 }
-.project-media:hover video {
- opacity: 1;
-}
+
 /* CONTROLS */
-.controls {
- margin-top: 30px;
+.showcase-controls{
+  margin-top:30px;
 }
-.controls button {
- background: none;
- border: 1px solid #9aa0ff;
- color: #9aa0ff;
- font-size: 20px;
- padding: 10px 18px;
- margin: 0 10px;
- cursor: pointer;
+
+.showcase-controls button{
+  background:none;
+  border:1px solid #9aa0ff;
+  border-radius: 15px;
+  color:#9aa0ff;
+  font-size:18px;
+  padding:10px 20px;
+  margin:0 12px;
+  cursor:pointer;
+  width: 130px;
+  transform: scale(1);
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+.showcase-controls button:hover{
+  transform: scale(1.1);
+  background-color: #00c2ff;
+  background-color: #00c2ff;
+  color: aliceblue;
+  opacity: 1;
+}
+
+/* chưa fix được hover cái này nó zoom lên */
+.actions a:hover{
+  transform: scale(1.1);
+  background-color: #00c2ff;
+  background-color: #00c2ff;
+  color: aliceblue;
+  opacity: 1;
 }

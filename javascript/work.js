@@ -1,70 +1,78 @@
 const projects = [
- {
-   title: "歩き動物",
-   desc: "Personal portfolio with cinematic UI",
-   img: "Avatar-VyMongDu.jpg",
-   video: "./asset/video/251044-歩き動物.mp4",
-   link: "#"
- },
- {
-   title: "Social Media Campaign",
-   desc: "Creative content & analytics dashboard",
-   img: "preview2.jpg",
-   video: "preview2.mp4",
-   link: "#"
- }
+  {
+    title: "WORK SHOWCASE",
+    subtitle: "Personal portfolio with dark luxury theme",
+    tech: ["HTML / CSS", "JavaScript", "GSAP"],
+    image: "preview.jpg",
+    video: "preview.mp4",
+    viewLink: "#",
+    sourceLink: "#"
+  },
+  {
+    title: "TODO APP",
+    subtitle: "Simple task manager application",
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: "preview2.jpg",
+    video: "preview2.mp4",
+    viewLink: "#",
+    sourceLink: "#"
+  },
+  {
+    title: "WEATHER APP",
+    subtitle: "Realtime weather forecast using API",
+    tech: ["HTML", "CSS", "JavaScript", "API"],
+    image: "preview3.jpg",
+    video: "preview3.mp4",
+    viewLink: "#",
+    sourceLink: "#"
+  }
 ];
 
-// Project-card Flipping func
 let index = 0;
-const card = document.querySelector(".project-card");
-document.getElementById("next").onclick = () => flip(1);
-document.getElementById("prev").onclick = () => flip(-1);
-function flip(dir) {
- card.style.transform = `rotateY(${dir * 90}deg)`;
- setTimeout(() => {
-   index = (index + dir + projects.length) % projects.length;
-   updateProject();
-   card.style.transform = "rotateY(0deg)";
- }, 300);
-}
 
-// Nav-bar open and close func
-function navslide(){
-  const toggle = document.getElementById("navToggle");
-  const nav = document.getElementById("sideNav");
+const title = document.querySelector(".showcase-info h2");
+const subtitle = document.querySelector(".showcase-info h4");
+const techList = document.querySelector(".tech");
+const img = document.querySelector(".showcase-media img");
+const video = document.querySelector(".showcase-media video source");
+const viewBtn = document.querySelector(".btn");
+const sourceBtn = document.querySelector(".btn.ghost");
 
-  toggle.addEventListener("click", () => {
-    toggle.classList.toggle("active");
-    nav.classList.toggle("active");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+function loadProject(i) {
+  const p = projects[i];
+
+  title.textContent = p.title;
+  subtitle.textContent = p.subtitle;
+
+  techList.innerHTML = "";
+  p.tech.forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = t;
+    techList.appendChild(li);
   });
+
+  img.src = p.image;
+  video.src = p.video;
+
+  viewBtn.href = p.viewLink;
+  sourceBtn.href = p.sourceLink;
+
+  document.querySelector(".showcase-media video").load();
 }
 
-// Func để update thông tin dự án lên trên trang.
-function updateProject() {
- const p = projects[index];
-//  Đây sẽ vô class project info tag H2 để lấy tên và hiện lên
- document.querySelector(".project-info h2").innerText = p.title;
+nextBtn.addEventListener("click", () => {
+  index++;
+  if (index >= projects.length) index = 0;
+  loadProject(index);
+});
 
-//  Đây sẽ vô class desc (description) để lấy thông tin cơ bản của dự án
- document.querySelector(".desc").innerText = p.desc;
+prevBtn.addEventListener("click", () => {
+  index--;
+  if (index < 0) index = projects.length - 1;
+  loadProject(index);
+});
 
-//  Đây sẽ vô class project-media tag img để lấy hình ảnh
- document.querySelector(".project-media img").src = p.img;
-
-//  Đây sẽ vô class project-media để hiện video nếu không có hình ảnh
- document.querySelector(".project-media video source").src = p.video;
-
-  if (p.video) {
-    img.style.display = "none";
-    video.style.display = "block";
-    source.src = p.video;
-    video.load();
-  } else {
-    video.style.display = "none";
-    img.style.display = "block";
-    img.src = p.img;
-  }
-}
-navslide();
-updateProject()
+loadProject(index);
