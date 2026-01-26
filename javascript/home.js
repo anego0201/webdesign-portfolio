@@ -8,6 +8,8 @@ function changeLang(lang) {
       document.getElementById("description").textContent = data.description;
     });
 }
+
+// func để nav chuyển động
 function navslide(){
   const toggle = document.getElementById("navToggle");
   const nav = document.getElementById("sideNav");

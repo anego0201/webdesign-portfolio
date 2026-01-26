@@ -3,17 +3,17 @@ const projects = [
     title: "WORK SHOWCASE",
     subtitle: "Personal portfolio with dark luxury theme",
     tech: ["HTML / CSS", "JavaScript", "GSAP"],
-    image: "preview.jpg",
-    video: "preview.mp4",
-    viewLink: "#",
+    image: "images\Avatar-VyMongDu.jpg",
+    video: "images\Avatar-VyMongDu.jpg",
+    viewLink: "",
     sourceLink: "#"
   },
   {
     title: "TODO APP",
     subtitle: "Simple task manager application",
     tech: ["HTML", "CSS", "JavaScript"],
-    image: "preview2.jpg",
-    video: "preview2.mp4",
+    image: "images\Avatar-VyMongDu.jpg",
+    video: "images\Avatar-VyMongDu.jpg",
     viewLink: "#",
     sourceLink: "#"
   },
@@ -21,8 +21,8 @@ const projects = [
     title: "WEATHER APP",
     subtitle: "Realtime weather forecast using API",
     tech: ["HTML", "CSS", "JavaScript", "API"],
-    image: "preview3.jpg",
-    video: "preview3.mp4",
+    image: "pimages\Avatar-VyMongDu.jpg",
+    video: "images\Avatar-VyMongDu.jpg",
     viewLink: "#",
     sourceLink: "#"
   }
@@ -30,6 +30,7 @@ const projects = [
 
 let index = 0;
 
+// Hiển thị thông tin trên màn hình
 const title = document.querySelector(".showcase-info h2");
 const subtitle = document.querySelector(".showcase-info h4");
 const techList = document.querySelector(".tech");
@@ -38,9 +39,11 @@ const video = document.querySelector(".showcase-media video source");
 const viewBtn = document.querySelector(".btn");
 const sourceBtn = document.querySelector(".btn.ghost");
 
+// biến số cho 2 nút bấm trước và sau
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
+// Load project để hiển thị lên trên html
 function loadProject(i) {
   const p = projects[i];
 
@@ -56,23 +59,35 @@ function loadProject(i) {
 
   img.src = p.image;
   video.src = p.video;
-
   viewBtn.href = p.viewLink;
   sourceBtn.href = p.sourceLink;
-
   document.querySelector(".showcase-media video").load();
 }
 
+// lấy event khi click vô nút trước và sau
 nextBtn.addEventListener("click", () => {
   index++;
   if (index >= projects.length) index = 0;
   loadProject(index);
-});
+})
 
 prevBtn.addEventListener("click", () => {
   index--;
   if (index < 0) index = projects.length - 1;
   loadProject(index);
-});
+})
 
-loadProject(index);
+// func để nav chuyển động
+function navslide(){
+  const toggle = document.getElementById("navToggle");
+  const nav = document.getElementById("sideNav");
+
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+};
+
+// Func này không hoạt động là navslide func cũng bị dừng luôn, tìm cách giải quyết
+//loadProject(index);
+navslide();
