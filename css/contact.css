@@ -1,7 +1,5 @@
 * {
-  box-sizing: border-box;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
@@ -24,6 +22,11 @@ h3 {
     font-size: 18px;
     margin-bottom: 10px;
     color: #9aa0ff;
+}
+
+h2 {
+  color: #9aa0ff;
+  margin-bottom: 10px;
 }
 
 /* Toggle Icon */
@@ -108,14 +111,15 @@ h3 {
 
 
 /* CONTACT */
-.contact {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 18px;
-  padding: 28px 0;
-  align-items: start;
+#contact {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  padding: 40px;
 }
 
+/* Name, Mesage, mail section */
 .form input,
 .form textarea {
   width: 100%;
@@ -138,19 +142,26 @@ h3 {
   opacity: 1;
 }
 
-.social {
+
+/* Social apps section */
+#social {
   display: flex;
   flex-direction: column;
-  gap: 12px
+  gap: 12px;
+  margin-top: 50px;
+}
+
+#social-icon {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
 }
 
 #github, #facebook, #line, #instagram{
   border-radius: 20%;
-
-
 }
 
-.social a {
+#social a {
   display: flex;
   flex-wrap: wrap;
   height: auto;
@@ -161,7 +172,7 @@ h3 {
   opacity: 0,7;
 }
 
-.social a:hover {
+#social #social-icon a:hover {
   transform: scale(1.1);
   opacity: 1;
 }

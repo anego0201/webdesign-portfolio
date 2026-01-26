@@ -11,7 +11,6 @@
 
 <!-- BODY -->
 <body>
-
   <!-- HEADER -->
    <!-- 
     Header này sẽ tái sử dụng cho các trang khác, 
@@ -37,7 +36,7 @@
     Main sẽ là nơi khác nhau giữa các bộ phận
     -->
     <main>
-      <section id="contact" class="contact">
+      <section id="contact">
         <div class="form">
           <h2>コンタクト</h2>
           <input type="text" placeholder="名前" />
@@ -45,16 +44,18 @@
           <textarea rows="5" placeholder="メッセージ" style="margin-top:12px"></textarea>
           <div style="margin-top:12px" id="send-btn-container"><img src="./images/app icon/発送btnFacebook.png" id="send-btn" width="70px" height="44px"></div>
         </div>
-        <aside class="social">  
+        <aside id="social">  
           <h3>連絡先</h3>
-          <a href="https://www.line.me/en/" target="_blank"><img src="./images/app icon/line-icon.png" width="50px" height="50px"
+          <div id="social-icon">
+            <a href="https://www.line.me/en/" target="_blank"><img src="./images/app icon/line-icon.png" width="50px" height="50px"
               id="line"></a>
-          <a href="https://www.facebook.com/lyhoanganhvy010120/" target="_blank"><img src="./images/app icon/facebook-icon.png"
+            <a href="https://www.facebook.com/lyhoanganhvy010120/" target="_blank"><img src="./images/app icon/facebook-icon.png"
               width="50px" height="50px" id="facebook"></a>
-          <a href="https://www.instagram.com/vymongdu/" target="_blank"><img src="./images/app icon/Instagram-icon.png" width="50px"
+            <a href="https://www.instagram.com/vymongdu/" target="_blank"><img src="./images/app icon/Instagram-icon.png" width="50px"
               height="50px" id="instagram"></a>
-          <a href="https://github.com/anego0201" target="_blank"><img src="./images/app icon/background-github-icon.png" width="50px"
+            <a href="https://github.com/anego0201" target="_blank"><img src="./images/app icon/background-github-icon.png" width="50px"
               height="50px" id="github"></a>    
+          </div>
         </aside>
       </section>
     </main>
