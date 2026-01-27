@@ -1,30 +1,27 @@
 const projects = [
   {
-    title: "WORK SHOWCASE",
-    subtitle: "Personal portfolio with dark luxury theme",
+    title: "歩く動物",
+    subtitle: "30秒短い",
     tech: ["HTML / CSS", "JavaScript", "GSAP"],
-    image: "images\Avatar-VyMongDu.jpg",
-    video: "images\Avatar-VyMongDu.jpg",
-    viewLink: "",
-    sourceLink: "#"
+    image: "./asset/work-showcase/歩く動物.gif",
+    video: "./images/Avatar-VyMongDu.jpg",
+    viewLink: "https://www.facebook.com/",
   },
   {
-    title: "TODO APP",
+    title: "計算機",
     subtitle: "Simple task manager application",
     tech: ["HTML", "CSS", "JavaScript"],
-    image: "images\Avatar-VyMongDu.jpg",
-    video: "images\Avatar-VyMongDu.jpg",
+    image: "./images/Avatar-VyMongDu.jpg",
+    video: "./images/Avatar-VyMongDu.jpg",
     viewLink: "#",
-    sourceLink: "#"
   },
   {
     title: "WEATHER APP",
     subtitle: "Realtime weather forecast using API",
     tech: ["HTML", "CSS", "JavaScript", "API"],
-    image: "pimages\Avatar-VyMongDu.jpg",
-    video: "images\Avatar-VyMongDu.jpg",
+    image: "./images/Avatar-VyMongDu.jpg",
+    video: "./images/Avatar-VyMongDu.jpg",
     viewLink: "#",
-    sourceLink: "#"
   }
 ];
 
@@ -36,8 +33,7 @@ const subtitle = document.querySelector(".showcase-info h4");
 const techList = document.querySelector(".tech");
 const img = document.querySelector(".showcase-media img");
 const video = document.querySelector(".showcase-media video source");
-const viewBtn = document.querySelector(".btn");
-const sourceBtn = document.querySelector(".btn.ghost");
+const viewBtn = document.querySelector(".btn-view");
 
 // biến số cho 2 nút bấm trước và sau
 const prevBtn = document.getElementById("prev");
@@ -60,7 +56,6 @@ function loadProject(i) {
   img.src = p.image;
   video.src = p.video;
   viewBtn.href = p.viewLink;
-  sourceBtn.href = p.sourceLink;
   document.querySelector(".showcase-media video").load();
 }
 
@@ -88,6 +83,4 @@ function navslide(){
   });
 };
 
-// Func này không hoạt động là navslide func cũng bị dừng luôn, tìm cách giải quyết
-//loadProject(index);
 navslide();

@@ -140,6 +140,8 @@ h2 {
 #send-btn:hover {
   transform: scale(1.1);
   opacity: 1;
+  /* Để đây để khi có đọc lại thì làm lại ảnh background để khi chỉ vô đổi thành ảnh dễ nhìn hơn */
+  background-image: url();
 }
 
 
