@@ -8,21 +8,40 @@ const projects = [
     viewLink: "https://www.facebook.com/",
   },
   {
+    // Chưa đáp lên repo github
     title: "計算機",
-    subtitle: "Simple task manager application",
-    tech: ["HTML", "CSS", "JavaScript"],
+    subtitle: "Java言語で作りました簡単計算機",
+    tech: ["Java"],
     image: "./images/Avatar-VyMongDu.jpg",
     video: "./images/Avatar-VyMongDu.jpg",
     viewLink: "#",
   },
   {
-    title: "WEATHER APP",
-    subtitle: "Realtime weather forecast using API",
+    // Chưa đáp lên repo github
+    title: "ビンゴゲーム",
+    subtitle: "配列の知識を応用する、ビンゴゲームを作りました！",
+    tech: ["Java"],
+    image: "./images/Avatar-VyMongDu.jpg",
+    video: "./images/Avatar-VyMongDu.jpg",
+    viewLink: "#",
+  },
+    {
+      // Chưa đáp lên repo github
+    title: "カードーゲーム",
+    subtitle: "appendChild、insertBefore、prepend、append といった DOM操作を勉強ように作りました。",
+    tech: ["HTML", "CSS", "JavaScript"],
+    image: "./images/Avatar-VyMongDu.jpg",
+    video: "./images/Avatar-VyMongDu.jpg",
+    viewLink: "#",
+  },
+    {
+    title: "",
+    subtitle: "",
     tech: ["HTML", "CSS", "JavaScript", "API"],
     image: "./images/Avatar-VyMongDu.jpg",
     video: "./images/Avatar-VyMongDu.jpg",
     viewLink: "#",
-  }
+  },
 ];
 
 let index = 0;
