@@ -6,7 +6,7 @@
 }
 
 body {
- min-height: 500vh;
+ min-height: 400vh;
  background: radial-gradient(
    circle at top right,
    #3a3f52 0%,
@@ -175,7 +175,7 @@ h3 {
   left: 50%;
   top: 150px;
   width: 4px;
-  height: 100%;
+  height: 92%;
   background-color: #9aa0ff;
 }
 
@@ -207,7 +207,7 @@ Nhưng cục tròn ở trước các container chứa thông tin ư
 .block-right::before {
   content: "";
   position: absolute;
-  right: -9%;
+  right: -9.3%;
   top: 50%;
   top: 30px;
   width: 15px;
@@ -219,7 +219,7 @@ Nhưng cục tròn ở trước các container chứa thông tin ư
 .block-left::before {
   content: "";
   position: absolute;
-  left: -9%;
+  left: -9.5%;
   top: 50%;
   width: 15px;
   height: 15px;
