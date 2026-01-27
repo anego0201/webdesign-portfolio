@@ -107,28 +107,19 @@ h3 {
 }
 
 /* TIMELINE SECTION */
-.scroll-watcher {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-}
-
 
 .block-left {
   position: relative;
   border: 5px solid #9aa0ff;
-  margin: 10px;
+  margin: 100px 10px;
   padding: 10px;
-  left: 50%;
+  left: 51.5%;
 }
 
 .block-right {
   position: relative;
   border: 5px solid #9aa0ff;
-  margin: 10px;
+  margin: 100px 10px;
   padding: 10px;
   right: 50%;
   text-align: end;
@@ -146,7 +137,18 @@ h3 {
   }
 }
 
-.block {
+.block-left{
+  /* 
+  1. animation visible là cách mà các phần tử được chứa construct đó sẽ được thực hiện như được viết
+  2. animation-timeline: view() là dòng để phần tử chỉ xuất hiện khi nằm trong phạm vi hiển thị trên màn hình
+  3. entry 0% và cover 40% là để từ khi vừa bắt đầu thấy và tới 40% màn hình sẽ hiện toàn bộ
+  */
+  animation: visible linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.block-right{
   /* 
   1. animation visible là cách mà các phần tử được chứa construct đó sẽ được thực hiện như được viết
   2. animation-timeline: view() là dòng để phần tử chỉ xuất hiện khi nằm trong phạm vi hiển thị trên màn hình
@@ -163,7 +165,10 @@ h3 {
   margin: auto;
 }
 
-/* Thuộc tính thanh timeline */
+/* 
+- Thuộc tính thanh timeline
+- Này là thanh màu tím ở giữa
+*/
 .scroll-watcher::before {
   content: "";
   position: absolute;
@@ -174,7 +179,50 @@ h3 {
   background-color: #9aa0ff;
 }
 
+.scroll-watcher {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.scroll-watcher {
+  animation: visible linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
 #date-container h1 {
   margin-top: 100px;
   margin-bottom: 50px;
+  text-align: center;
+}
+
+
+/* 
+Nhưng cục tròn ở trước các container chứa thông tin ư
+2 cục cho khung trái và khung phải
+*/
+.block-right::before {
+  content: "";
+  position: absolute;
+  right: -9%;
+  top: 50%;
+  top: 30px;
+  width: 15px;
+  height: 15px;
+  background-color: #9aa0ff;
+  border-radius: 50%;
+}
+
+.block-left::before {
+  content: "";
+  position: absolute;
+  left: -9%;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #9aa0ff;
+  border-radius: 50%;
 }
