@@ -6,7 +6,7 @@
 }
 
 body {
- min-height: 100vh;
+ min-height: 500vh;
  background: radial-gradient(
    circle at top right,
    #3a3f52 0%,
@@ -14,6 +14,10 @@ body {
    #0b0e14 70%
  );
  color: #fff;
+}
+
+main {
+  width: 100%;
 }
 
 /* H3 tag */
@@ -100,4 +104,21 @@ h3 {
 /* hover vào gạch chân chạy ra */
 .side-nav a:hover::after {
   width: 100%;
+}
+
+/* TIMELINE SECTION */
+.scroll-watcher {
+  height: 10px;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  background-color: aqua;
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-wacther linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {scale: 1 1;}
 }
