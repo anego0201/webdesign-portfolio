@@ -109,10 +109,7 @@ h5 {
 
 
 
-/* ===========================
-   PROJECT SHOWCASE LAYOUT
-=========================== */
-
+/* PROJECT SHOWCASE LAYOUT */
 .project-showcase{
   min-height: 100vh;
   display:flex;
@@ -141,7 +138,6 @@ h5 {
 
 .showcase-info h2{
   text-align: center;
-  border: ;
   font-size:32px;
   margin-bottom:10px;
 }
@@ -166,7 +162,7 @@ h5 {
 .actions a {
   text-decoration: none;
   background:none;
-  border:1px solid #9aa0ff;
+  border: 3px solid #9aa0ff;
   border-radius: 15px;
   color:#9aa0ff;
   font-size:18px;
@@ -215,7 +211,7 @@ h5 {
 
 .showcase-controls button{
   background:none;
-  border:1px solid #9aa0ff;
+  border: 3px solid #9aa0ff;
   border-radius: 15px;
   color:#9aa0ff;
   font-size:18px;
@@ -231,7 +227,7 @@ h5 {
 .showcase-controls button:hover{
   transform: scale(1.1);
   background-color: #00c2ff;
-  background-color: #00c2ff;
+  border-color: #38389b;
   color: aliceblue;
   opacity: 1;
 }
@@ -240,7 +236,7 @@ h5 {
 .actions a:hover{
   transform: scale(1.1);
   background-color: #00c2ff;
-  background-color: #00c2ff;
   color: aliceblue;
+  border-color: #38389b;
   opacity: 1;
 }

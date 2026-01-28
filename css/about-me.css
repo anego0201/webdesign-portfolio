@@ -6,7 +6,7 @@
 }
 
 body {
- min-height: 400vh;
+ min-height: 480vh;
  background: radial-gradient(
    circle at top right,
    #3a3f52 0%,
@@ -107,57 +107,110 @@ h3 {
 }
 
 /* TIMELINE SECTION */
-
+/* Main block and dot */
 .block-left {
+  font-size: 1.5em;
   position: relative;
+  background-color: #2f3a63;
   border: 5px solid #9aa0ff;
+  border-radius: 10px;
   margin: 100px 10px;
   padding: 10px;
   left: 51.5%;
+  box-shadow: 5px 5px 3px #6c72bf;
 }
 
 .block-right {
+  font-size: 1.5em;
   position: relative;
   border: 5px solid #9aa0ff;
+  background-color: #2f3a63;
+  border-radius: 10px;
   margin: 100px 10px;
   padding: 10px;
   right: 50%;
   text-align: end;
+  box-shadow: 5px 5px 3px #6c72bf;
+}
+
+/* Sub-block and sub-dot */
+.subBlock-left {
+  font-size: 0.8em;
+  position: relative;
+  border: 3px dashed #454659;
+  background-color: #2f3a63;
+  border-radius: 10px;
+  margin: 100px 10px;
+  padding: 10px;
+  left: 51.5%;
+  box-shadow: 5px 5px 3px #6c72bf;
+}
+
+.subBlock-right {
+  font-size: 0.8em;
+  position: relative;
+  border: 3px dashed #454659;
+  background-color: #2f3a63;
+  border-radius: 10px;
+  margin: 100px 10px;
+  padding: 10px;
+  right: 50%;
+  text-align: end;
+  box-shadow: 5px 5px 3px #6c72bf;
 }
 
 /* animation visible construct */
-@keyframes visible{
+
+/* Visible form the left */
+@keyframes visible-left{
   from {
     opacity: 0;
-    scale: 0.5;
+    transform: translateX(-100px);
   }
   to {
     opacity: 1;
-    scale: 1;
+    transform: translateX(0);
   }
 }
 
-.block-left{
+/* Visible from the right */
+@keyframes visible-right{
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* .block-left, .block-right, .subBlock-left, .subBlock-right{ */
   /* 
   1. animation visible là cách mà các phần tử được chứa construct đó sẽ được thực hiện như được viết
   2. animation-timeline: view() là dòng để phần tử chỉ xuất hiện khi nằm trong phạm vi hiển thị trên màn hình
   3. entry 0% và cover 40% là để từ khi vừa bắt đầu thấy và tới 40% màn hình sẽ hiện toàn bộ
   */
-  animation: visible linear;
+  /* animation: visible linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+} */
+
+
+.block-right, .subBlock-right{
+  animation: visible-right linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
 
-.block-right{
-  /* 
-  1. animation visible là cách mà các phần tử được chứa construct đó sẽ được thực hiện như được viết
-  2. animation-timeline: view() là dòng để phần tử chỉ xuất hiện khi nằm trong phạm vi hiển thị trên màn hình
-  3. entry 0% và cover 40% là để từ khi vừa bắt đầu thấy và tới 40% màn hình sẽ hiện toàn bộ
-  */
-  animation: visible linear;
+/* WORKED */
+.block-left, .subBlock-left {
+  animation: visible-left linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
+
 
 .scroll-watcher {
   position: relative;
@@ -204,10 +257,11 @@ h3 {
 Nhưng cục tròn ở trước các container chứa thông tin ư
 2 cục cho khung trái và khung phải
 */
+/* Main-dot */
 .block-right::before {
   content: "";
   position: absolute;
-  right: -9.3%;
+  right: -6.4%;
   top: 50%;
   top: 30px;
   width: 15px;
@@ -219,10 +273,34 @@ Nhưng cục tròn ở trước các container chứa thông tin ư
 .block-left::before {
   content: "";
   position: absolute;
-  left: -9.5%;
+  left: -6.8%;
   top: 50%;
   width: 15px;
   height: 15px;
+  background-color: #9aa0ff;
+  border-radius: 50%;
+}
+
+/* Sub-dot */
+.subBlock-right::before {
+  content: "";
+  position: absolute;
+  right: -4.7%;
+  top: 50%;
+  top: 30px;
+  width: 8px;
+  height: 8%;
+  background-color: #9aa0ff;
+  border-radius: 50%;
+}
+
+.subBlock-left::before {
+  content: "";
+  position: absolute;
+  left: -5.3%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
   background-color: #9aa0ff;
   border-radius: 50%;
 }
